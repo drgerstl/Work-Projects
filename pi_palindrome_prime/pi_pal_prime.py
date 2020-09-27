@@ -6,7 +6,8 @@
 # Purpose:	    Accepts a text file which is expected to contain the digits of 
 #               pi. It then finds the first 7 digit, prime, palindromic number
 #               and prints the number with a success message. If no number was 
-#               found it prints an error message instead
+#               found it prints an error message instead. pi.txt is expected to
+#               be in the same directory as this file.
 ################################################################################
 
 ####
