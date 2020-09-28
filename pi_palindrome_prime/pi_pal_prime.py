@@ -60,7 +60,7 @@ def is_palindrome(string):
     # Local Variables
     left = 0
     right = len(string) - 1
-    palindrome = False
+    is_palindrome = False
 
     # Check each character starting at the ends and moving to the middle
     while right - left > 0:
@@ -68,40 +68,43 @@ def is_palindrome(string):
             left += 1
             right -= 1            
         else: # Characters dont match 
-            return palindrome
+            return is_palindrome
 
     # String is a pallindrome
-    palindrome = True
+    is_palindrome = True
 
-    return palindrome
+    return is_palindrome
 
 ####
 # Accepts an integer value and returns a boolean indicating whether or not the
 # provided number is a prime number
+#
+# Primality test by trial division reference:
+# https://en.wikipedia.org/wiki/Primality_test
 ####
 
 def is_prime(number):
 
     # Local Variables
-    prime = True
+    is_prime = True
     i = 5
     step = 6
 
     # Check for 1-3 and basic division elimination
     if number <= 3:
-        return prime
+        return is_prime
     elif number % 2 == 0 or number % 3 == 0:
         prime = False
-        return prime
+        return is_prime
 
     # Check other possibilites by trial division
     while (i * i) <= number:
         if (number % i == 0) or (number % (i + 2) == 0):
-            prime = False
-            return prime
+            is_prime = False
+            return is_prime
         i = i + step
 
-    return prime
+    return is_prime
 
 # Main
 if __name__ == "__main__":
