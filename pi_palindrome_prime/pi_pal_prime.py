@@ -94,7 +94,7 @@ def is_prime(number):
     if number <= 3:
         return is_prime
     elif number % 2 == 0 or number % 3 == 0:
-        prime = False
+        is_prime = False
         return is_prime
 
     # Check other possibilites by trial division
